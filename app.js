@@ -27,10 +27,10 @@ app.post("/", function(req, res){
     };
 
     const jsonData = JSON.stringify(data);
-    const endpoint = "https://us4.api.mailchimp.com/3.0/lists/a4fb8af0fe";
+    const endpoint = "https://us4.api.mailchimp.com/3.0/lists/" + process.env.LIST;
     const options = {
         method: 'POST',
-        auth: "dominic:7517b877c9bd8b05e9f2fe9d7788bd5a-us4"
+        auth: "dominic:" + process.env.API_KEY
     }
 
     const request = https.request(endpoint, options, function(response){
