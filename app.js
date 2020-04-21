@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 let app = express();
-app.use(express.static("public"));
+app.use(express.static("Public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", function(req, res){
